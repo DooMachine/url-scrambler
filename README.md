@@ -8,7 +8,7 @@ Scramble dmaoin nmeas to prenevt hijacking, phishing wtih yuor domain name.
 Clone Repository
 
 ```
-https://github.com/DooMachine/url-scrambler.git
+git clone https://github.com/DooMachine/url-scrambler.git
 ```
 Install Requirements
 ```
