@@ -1,2 +1,2 @@
-python-whois==0.7.7
+python-whois==0.7.0
 editdistance==0.4
