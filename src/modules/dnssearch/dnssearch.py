@@ -15,15 +15,19 @@ class DomainNameCheck():
                 if whois_info['status'] == None:
                     status_dict[full_d_name] = "Avaliable"
                 else:
-                    status_dict[full_d_name] = "Not Avaliable"
+                    if type(whois_info['expiration_date']) is list:                 
+                        status_dict[full_d_name] = whois_info['expiration_date'][0]
+                    else:             
+                        status_dict[full_d_name] = whois_info['expiration_date']
+
             except whois.parser.PywhoisError:
-                status_dict[full_d_name] = "Not Avaliable"
+                status_dict[full_d_name] = "Avaliable"
             
         return status_dict
     def Dump_To(self,file,domains_status):
         with open(file,'w+') as f:
             for key,value in domains_status.items():
-                f.write(key+' - '+value+'\n')
+                f.write(key+' - '+str(value)+'\n')
             f.truncate()
             f.close()
         
