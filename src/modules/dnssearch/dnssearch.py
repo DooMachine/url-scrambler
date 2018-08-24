@@ -2,11 +2,9 @@ import whois
 class DomainNameCheck():
     """
     Domain Name Check Service
-    """  
-
+    """ 
     def Check_Domains(self, domain_names, hostname_end):
         print ("Checking for domain avaliabilities")
-        print (domain_names)
         status_dict = {}
         for d_name in domain_names:
             full_d_name = d_name+'.'+hostname_end
