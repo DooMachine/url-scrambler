@@ -1,7 +1,7 @@
-# Url-Scrambler
+# url-scrambler
 
 Generate new scrambled domain names with provided domain name, difference limited with levenshtein distance and whois checking automated.
-Generate domain names to prevent or hijacking, phishing.
+Scrambled domain names to prevent hijacking, phishing of your domain name.
 
 ### Installing
 
