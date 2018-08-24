@@ -20,12 +20,12 @@ pip install -r requirements.txt
 
 To generate example.com scrambled urls 
 ```
-python scrambler --url example.com --output dnames.txt --distance 2
+python scrambler.py --url example.com --output dnames.txt --distance 2
 ```
 
 To generate example.com scrambled urls with whois check
 ```
-python scrambler --url example.com --output dnames.txt --distance 2 --checkdomains
+python scrambler.py --url example.com --output dnames.txt --distance 2 --checkdomains
 ```
 
 
