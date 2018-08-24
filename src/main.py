@@ -15,7 +15,7 @@ parser.add_argument('--levensteinlimit','-ll',type=int)
 args = vars(parser.parse_args())
 outputpath = os.path.join(os.getcwd(),args['output'])
 
-levensteinlimit = 1
+levensteinlimit = 4
 if 'levensteinlimit' in args:
     limit = args['levensteinlimit']
 
