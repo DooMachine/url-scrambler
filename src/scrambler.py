@@ -33,5 +33,5 @@ else:
         f.truncate()
         f.close()
 
-print("Generated "+str(len(scrambleds))+"domain names")
+print("Generated "+str(len(scrambleds))+" domain names")
 print("Output dumped to "+ outputpath)
