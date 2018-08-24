@@ -7,7 +7,7 @@ from modules.dnssearch.dnssearch import DomainNameCheck
 parser = argparse.ArgumentParser(description='Generate and check domain names for scrambled urls of url')
 parser.add_argument('--url','-u', metavar='instagram.com', type=str, help='url of website', required=True)
 parser.add_argument('--output','-o', metavar='output.txt', type=str, help='output directory', required=True)
-parser.add_argument('--checkdomain','-cd', metavar='false', nargs='*', type=bool, help='Check For Domain Names ?')
+parser.add_argument('--checkdomains','-cd', metavar='false', nargs='*', type=bool, help='Check For Domain Names ?')
 parser.add_argument('--distance','-d',type=int)
 
 
@@ -22,8 +22,7 @@ scr = Scrambler()
 full_hostname = args['url'].split('.')
 
 scrambleds = scr.Scramble_Word(full_hostname[0],levensteinlimit)
-print (args['checkdomain'])
-if (args['checkdomain'] is not None):
+if (args['checkdomains'] is not None):
     dn_checker = DomainNameCheck()
     dn_obj = dn_checker.Check_Domains(scrambleds,full_hostname[1])
     dn_checker.Dump_To(outputpath,dn_obj)
@@ -33,6 +32,6 @@ else:
             f.write(dname+'.'+full_hostname[1]+'\n')
         f.truncate()
         f.close()
-def validHostName(hostname):
-    return
 
+print("Generated "+len(scrambleds)+"domain names")
+print("Output dumped to "+ outputpath)
